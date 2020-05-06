@@ -1,3 +1,48 @@
 body {
-    background-color: bisque;
+    background-color: #ebeef2;
+}
+
+h1 {
+    font-size: 24px;
+    color: #fff;
+    margin: 15px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+#logo {
+    display: flex;
+    margin: 0 100px 0 5px;
+}
+
+#logo img {
+    margin-top: 10px;
+}
+
+#principal {
+    margin: 20px;
+}
+
+#principal li {
+    display: inline;
+    float: left;
+    background-color: #f5f7f9;
+    padding: 5px;
+    margin: 20px;
+    text-align: center;
+}
+
+#lista {
+    width: 80%;
+    margin-left: 10%;
+}
+
+#nomeSite {
+    color: #ffb324;
+    font-size: 24px;
+    margin: 15px;
 }
