@@ -41,16 +41,16 @@ h2 {
 }
 
 #lista {
-    width: 80%;
-    margin-left: 10%;
+    width: 95%;
+    margin-left: 5%;
 }
 
 #nomeSite {
-    color: #ffb324;
+    color: #fff;
     font-size: 24px;
     margin: 15px;
 }
 
 .navbar-text {
-	padding-left: 370px;
+    padding-left: 370px;
 }
