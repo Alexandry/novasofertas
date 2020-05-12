@@ -34,10 +34,10 @@ h2 {
 #principal li {
     display: inline;
     float: left;
-    background-color: #f5f7f9;
-    padding: 5px;
+    padding: 0px;
     margin: 20px;
     text-align: center;
+    background-color: #ebeef2;
 }
 
 #lista {
@@ -53,4 +53,109 @@ h2 {
 
 .navbar-text {
     padding-left: 370px;
+}
+
+
+/**Efeito de Flip*/
+
+.flip-container {
+    width: 300px;
+    height: 600px;
+    perspective: 1000px;
+}
+
+.flipper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+    /* se quiser uma animação na vertical,
+    troque por rotateX(180deg)
+    */
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+    width: 300px;
+    height: 600px;
+    background-color: #d5dff9;
+}
+
+.back img {
+    margin-top: 25px;
+}
+
+#title-back {
+    color: black;
+}
+
+#textoCodigo {
+    margin-top: 30px;
+    color: black;
+}
+
+
+/**CSS CopyText*/
+
+
+/* Style buttons */
+
+.btnCopy {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    background: url(../imagens/copy.png);
+    height: 32px;
+    width: 32px;
+    padding: 10px;
+    margin-left: 5px;
+    ;
+}
+
+
+/* Darker background on mouse-over */
+
+.btnCopy:hover {
+    background-color: rgb(195, 204, 230);
+}
+
+.containerAlertFalse {
+    visibility: hidden;
+}
+
+.containerAlertTrue {
+    visibility: visible;
+    margin: 10px;
+    display: block;
+    align-content: center;
+}
+
+#meuInput {
+    height: 40px;
+    padding: 5px;
+    ;
 }

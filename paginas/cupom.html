@@ -9,16 +9,20 @@
     <meta name="author" content="Ofertas Online">
     <link rel="icon" href="../imagens/dinheiro.png">
     <title>Ofertas</title>
+    <link href="../css/reset.css" rel="stylesheet">
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/carousel.css" rel="stylesheet">
     <link href="../css/footer-with-button-logo.css" rel="stylesheet">
     <link href="../css/estilo.css" rel="stylesheet">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/Footer-with-button-logo.css">
     <!-- Bootstrap core JavaScript
 		================================================== -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/copyText.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
 
 
 </head>
@@ -64,25 +68,37 @@
         <h2>Ofertas do Dia:</h2>
         <ul id="lista">
             <li>
-                <a href="#"> <iframe src="http://ad.lomadee.com/banner/view?sourceId=36532414&dimension=6&width=300&height=600&method=0&advertisers=&tags=" height="610" width="310" name="publicidade"></iframe>
-            </li>
-            <li>
-                <a href="#"> <iframe src="http://ad.lomadee.com/banner/view?sourceId=36532414&dimension=6&width=300&height=600&method=0&advertisers=&tags=" height="610" width="310" name="publicidade"></iframe>
-            </li>
-            <li>
-                <a href="#"> <iframe src="http://ad.lomadee.com/banner/view?sourceId=36532414&dimension=6&width=300&height=600&method=0&advertisers=&tags=" height="610" width="310" name="publicidade"></iframe>
-            </li>
-            <li>
-                <a href="#"> <iframe src="http://ad.lomadee.com/banner/view?sourceId=36532414&dimension=6&width=300&height=600&method=0&advertisers=&tags=" height="610" width="310" name="publicidade"></iframe>
-            </li>
-            <li>
-                <a href="#"> <iframe src="http://ad.lomadee.com/banner/view?sourceId=36532414&dimension=6&width=300&height=600&method=0&advertisers=&tags=" height="610" width="310" name="publicidade"></iframe>
-            </li>
-            <li>
-                <a href="#"> <iframe src="http://ad.lomadee.com/banner/view?sourceId=36532414&dimension=6&width=300&height=600&method=0&advertisers=&tags=" height="610" width="310" name="publicidade"></iframe>
-            </li>
-            <li>
-                <a href="#"> <iframe src="http://ad.lomadee.com/banner/view?sourceId=36532414&dimension=6&width=300&height=600&method=0&advertisers=&tags=" height="610" width="310" name="publicidade"></iframe>
+                <div class="flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <iframe src="http://ad.lomadee.com/banner/view?sourceId=36532414&dimension=6&width=300&height=600&method=0&advertisers=&tags=" height="610" width="310" name="publicidade"></iframe>
+                        </div>
+                        <div class="back">
+                            <img src="../imagens/logo.png" height="100" width="100" name="publicidade"></img>
+                            <h2 id="title-back">Economize 35% em X com vale desconto Y </h2>
+                            <hr width=“ 2” size=“ 100”>
+
+                            <h2 id="textoCodigo">Copie e utilize o código abaixo:</h2>
+
+                            <!-- The text field -->
+                            <input type="text" value="Hello World" id="meuInput">
+
+
+                            <!-- The button used to copy the text -->
+                            <button class="btnCopy" onclick='copyText()'></button>
+
+                            <div class="containerAlertFalse" id="alertaTextoCopiado">
+                                <div class="alert alert-success alert-dismissible" data-dismiss="alert">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                    <strong>Copiado!</strong>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
             </li>
             <li>
                 <a href="#"> <iframe src="http://ad.lomadee.com/banner/view?sourceId=36532414&dimension=6&width=300&height=600&method=0&advertisers=&tags=" height="610" width="310" name="publicidade"></iframe>
