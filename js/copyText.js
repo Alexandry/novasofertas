@@ -1,22 +1,20 @@
-function copyText() {
-    var copyText = document.getElementById("meuInput");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    document.execCommand("copy");
+function copyText(codigo, idinput) {
 
-    exibirAlerta();
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(codigo).select();
+    document.execCommand("copy");
+    $temp.remove();
+
+    console.log(codigo);
+    console.log(idinput);
+
+    exibirAlerta(idinput);
 
 }
 
-function exibirAlerta() {
-    const alerta = document.querySelector("#alertaTextoCopiado");
-    alerta.classList.remove("containerAlertFalse");
-    alerta.classList.add("containerAlertTrue");
-
-    setInterval(function() {
-        alerta.classList.add("containerAlertFalse");
-        alerta.classList.remove("containerAlertTrue");
-    }, 5000);
-
-
+function exibirAlerta(idinput) {
+    // $("#loading").slideToggle(1000);
+    let textoTemp = `#${idinput}`;
+    $(textoTemp).slideToggle(1000);
 }

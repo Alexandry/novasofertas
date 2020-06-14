@@ -15,7 +15,7 @@
         gtag('config', 'UA-35972989-2');
     </script>
     <meta charset="utf-8">
-	<meta name="lomadee-verification" content="22890015" />
+    <meta name="lomadee-verification" content="22890015" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -26,23 +26,21 @@
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/carousel.css" rel="stylesheet">
     <link href="../css/footer-with-button-logo.css" rel="stylesheet">
-    <link href="../css/estilo.css" rel="stylesheet">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/Footer-with-button-logo.css">
+    <link rel="stylesheet" href="../css/Footer-with-button-logo.css">
+    <link href="../css/estilo.css" rel="stylesheet">
     <!-- Bootstrap core JavaScript
 		================================================== -->
     <script src="../js/jquery.min.js"></script>
     <script src="../js/copyText.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 
-
-
 </head>
 
 <body role="document">
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top cabecalho">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -56,74 +54,51 @@
                         <img src="../imagens/dinheiro.png" alt="Minha Figura" width="30px" height="30px">
                         <h1 id="nomeSite">Ofertas</h1>
                     </figure>
-
                 </header>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="cupom.html">Cupons</a></li>
-                    <li><a href="promocao.html">Promoções</a></li>
+                    <li><a href="promocoes.html">Promoções</a></li>
                 </ul>
-                <span class="navbar-text">
-				o melhor preço é aqui
-			</span>
-            </div>
 
+            </div>
             <!--/.nav-collapse -->
         </div>
     </nav>
-
     <!-- Lista de publicidades
 		================================================== -->
 
     <div id="principal">
-        <h2>Ofertas do Dia:</h2>
         <ul id="lista">
             <li>
                 <div class="flip-container">
                     <div class="flipper">
                         <div class="front">
-                            <iframe src="http://ad.lomadee.com/banner/view?sourceId=36532414&dimension=6&width=300&height=600&method=0&advertisers=&tags=" height="610" width="310" name="publicidade"></iframe>
+                            <h2>17% de desconto em plano de 1 ano na NordVPN</h2>
+                            <img src="https://www.lomadee.com/programas/BR/6404/logo_185x140.png">
+                            <div class="datafinal">valido até 30/06/2020</div>
                         </div>
                         <div class="back">
-                            <img src="../imagens/logo.png" height="100" width="100" name="publicidade"></img>
-                            <h2 id="title-back">Economize 35% em X com vale desconto Y </h2>
-                            <hr width=“ 2” size=“ 100”>
-
-                            <h2 id="textoCodigo">Copie e utilize o código abaixo:</h2>
-
+                            <h2 id="title-back">Cupom de desconto </h2>
+                            <hr width="2" size="100">
+                            <h4 id="textoCodigo">Copie e utilize o código abaixo:</h4>
                             <!-- The text field -->
-                            <input type="text" value="Hello World" id="meuInput">
-
-
+                            <input type="text" value="Hello World" class="meuInput">
                             <!-- The button used to copy the text -->
                             <button class="btnCopy" onclick='copyText()'></button>
-
-
-                            <div class="containerAlertFalse" id="alertaTextoCopiado">
-                                <div class="alert alert-success alert-dismissible" data-dismiss="alert">
-                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                    <strong>Copiado!</strong>
-                                </div>
-                            </div>
-
-                            <a href="#" id="irParaOferta" class="badge badge-warning">Comprar Agora</a>
-
+                            <div data-dismiss="alert" class="alert alert-success alert-dismissible">
+                                <a href="#" data-dismiss="alert" aria-label="close" class="close">&times;</a>
+                                <strong>Copiado com sucesso!</strong></div>
+                            <a href="#" class="badge badge-warning irParaOferta">Comprar Agora</a>
                         </div>
-
                     </div>
-
                 </div>
             </li>
-            <li>
-                <a href="#"> <iframe src="http://ad.lomadee.com/banner/view?sourceId=36532414&dimension=6&width=300&height=600&method=0&advertisers=&tags=" height="610" width="310" name="publicidade"></iframe>
-            </li>
-
         </ul>
     </div>
     <!-- /.Lista de publicidades -->
-
     <!-- footer
 		================================================== -->
     <div class="content">
@@ -138,8 +113,8 @@
                     <h5>Inicio</h5>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="https://bit.ly/front-end-curso-completo-promocao-01">Cursos</a></li>
-                        <li><a href="#">Downloads</a></li>
+                        <li><a href="#">Cupons</a></li>
+                        <li><a href="#">Promoções</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-2">
@@ -175,8 +150,11 @@
         </div>
     </footer>
 
-    <!-- /.footer -->
+    <!--Loading-->
+    <img src="../imagens/spinner.gif" id="loading">
 
+    <!-- /.footer -->
+    <script src="../js/xmlTopOfertas.js"></script>
 </body>
 
 </html>
