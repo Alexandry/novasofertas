@@ -86,29 +86,28 @@ function adicionarFlipBack(codigo, link, total) {
     let infoAlert = codigo + total;
     let codigoTemp = `copyText('${codigo}','${infoAlert}')`;
     let elementoDivBack = $("<div>");
+    let elementoDivBackConteudo = $("<div>").addClass("backConteudo");
     let elementoH2 = $("<h2>").text("Cupom de desconto");
-    let elementoHr = $("<hr>").attr("width", "2").attr("size", "100");
+    let elementoHr = $("<hr>").attr("width", "2").attr("size", "100").addClass("linhaHr");
+    let elementoHrTwo = $("<hr>").attr("width", "2").attr("size", "100").addClass("linhaHr");
+
     let elementoH4 = $("<h4>").text("Copie e utilize o código abaixo:");
     let elementohInput = $("<input>").attr("type", "text").attr("value", codigo).addClass("meuInput");
     let elementoButton = $("<button>").attr("name", infoAlert).attr("onclick", codigoTemp).addClass("btnCopy");
     let elementoBtA = $("<a>").attr("href", link).addClass("badge").addClass("badge-warning").addClass("irParaOferta").text("Comprar Agora");
 
-    let elementoDivMsg = $("<div>").attr("id", infoAlert).addClass("containerAlert");
-    let elementoDivMsgInfo = $("<div>").attr("data-dismiss", "alert").addClass("alert").addClass("alert-success ").addClass("alert-dismissible");
-    let elementoAMsg = $("<a>").attr("href", "#").attr("data-dismiss", "alert").attr("aria-label", "close").addClass("close").text(`x`);
-    let elementostrongMsg = $("<strong>").text("Copiado com sucesso!");
-    elementoDivMsgInfo.append(elementoAMsg);
-    elementoDivMsgInfo.append(elementostrongMsg);
-    elementoDivMsg.append(elementoDivMsgInfo);
+    let elementoDivMsg = $("<span>").attr("title", "msg").attr("id", infoAlert).addClass("tooltip");
 
-    elementoDivBack.append(elementoH2);
-    elementoDivBack.append(elementoBtA);
-    elementoDivBack.append(elementoHr);
-    elementoDivBack.append(elementoH4);
+    elementoDivBackConteudo.append(elementoH2);
+    elementoDivBackConteudo.append(elementoHr);
+    elementoDivBackConteudo.append(elementoH4);
 
-    elementoDivBack.append(elementohInput);
-    elementoDivBack.append(elementoButton);
-    elementoDivBack.append(elementoDivMsg);
+    elementoDivBackConteudo.append(elementoDivMsg);
+    elementoDivBackConteudo.append(elementohInput);
+    elementoDivBackConteudo.append(elementoButton);
+    elementoDivBackConteudo.append(elementoHrTwo);
+    elementoDivBackConteudo.append(elementoBtA);
+    elementoDivBack.append(elementoDivBackConteudo);
     elementoDivBack.addClass("back");
 
     return elementoDivBack;

@@ -28,17 +28,20 @@
     <link href="../css/footer-with-button-logo.css" rel="stylesheet">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../css/Footer-with-button-logo.css">
+
+    <link rel="stylesheet" type="text/css" href="../bibliotecas/tooltipster/dist/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../bibliotecas/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-punk.min.css" />
+
     <link href="../css/estilo.css" rel="stylesheet">
     <!-- Bootstrap core JavaScript
 		================================================== -->
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/copyText.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+
 
 </head>
 
 <body role="document">
+
+
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top cabecalho">
         <div class="container">
@@ -52,7 +55,7 @@
                 <header>
                     <figure id="logo">
                         <img src="../imagens/dinheiro.png" alt="Minha Figura" width="30px" height="30px">
-                        <h1 id="nomeSite">Ofertas</h1>
+                        <h1 id="nomeSite">Descontos Mania</h1>
                     </figure>
                 </header>
             </div>
@@ -71,6 +74,8 @@
 		================================================== -->
 
     <div id="principal">
+        <h1>Confira os cupons de desconto</h1>
+        <hr size=”10″ style="border-top: 1px solid #fff; margin:0% 5% 0% 6%;" />:
         <ul id="lista">
             <li>
                 <div class="flip-container">
@@ -87,10 +92,11 @@
                             <!-- The text field -->
                             <input type="text" value="Hello World" class="meuInput">
                             <!-- The button used to copy the text -->
-                            <button class="btnCopy" onclick='copyText()'></button>
-                            <div data-dismiss="alert" class="alert alert-success alert-dismissible">
-                                <a href="#" data-dismiss="alert" aria-label="close" class="close">&times;</a>
-                                <strong>Copiado com sucesso!</strong></div>
+
+                            <span class="tooltip" title="This is my span's tooltip message!">Some text</span>
+                            <button class="btnCopy" onclick='copyText("iptxt", "iptxt")'></button>
+
+
                             <a href="#" class="badge badge-warning irParaOferta">Comprar Agora</a>
                         </div>
                     </div>
@@ -107,7 +113,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <h2 class="logo"><a href="#"> LOGO </a></h2>
+                    <h2 class="logo"><a href="#"> Descontos Mania </a></h2>
                 </div>
                 <div class="col-sm-2">
                     <h5>Inicio</h5>
@@ -152,9 +158,14 @@
 
     <!--Loading-->
     <img src="../imagens/spinner.gif" id="loading">
-
     <!-- /.footer -->
-    <script src="../js/xmlTopOfertas.js"></script>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/xmlCupons.js"></script>
+    <script src="../js/copyText.js"></script>
+    <script type="text/javascript" src="../bibliotecas/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+
 </body>
 
 </html>
