@@ -94,7 +94,7 @@ function adicionarFlipBack(codigo, link, total) {
     let elementoH4 = $("<h4>").text("Copie e utilize o código abaixo:");
     let elementohInput = $("<input>").attr("type", "text").attr("value", codigo).addClass("meuInput");
     let elementoButton = $("<button>").attr("name", infoAlert).attr("onclick", codigoTemp).addClass("btnCopy");
-    let elementoBtA = $("<a>").attr("href", link).addClass("badge").addClass("badge-warning").addClass("irParaOferta").text("Comprar Agora");
+    let elementoBtA = $("<a>").attr("href", link).attr("target", "_blank").addClass("badge").addClass("badge-warning").addClass("irParaOferta").text("Comprar Agora");
 
     let elementoDivMsg = $("<span>").attr("title", "msg").attr("id", infoAlert).addClass("tooltip");
 
